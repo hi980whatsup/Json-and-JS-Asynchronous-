@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h3>JAVASCRIPT CALLBACKS</h3>
+        <p>Do a calculation and then display the result.</p>
+        <p id="result"></p>
+        <script>
+            function myDisplayer(value) {
+                document.getElementById("result").innerHTML = value;
+
+            }
+            function myCalculator(num1, num2, myCallback) {
+                let sum = num1 + num2;
+                myCallback(sum);
+
+            }
+            myCalculator(10, 10, myDisplayer);
+        </script>
+    </body>
